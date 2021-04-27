@@ -11,7 +11,6 @@ function showBigImage(event) {
 
     bigImage.className = "rounded-lg shadow-lg w-11/12 md:w-2/3";
     bigImage.src = "img/big/" + bImgFileName;
-    bigImage.alt = event.target.alt;
 
     bigImageDiv.innerHTML = "";
     bigImageDiv.append(bigImage);
@@ -19,11 +18,6 @@ function showBigImage(event) {
     bigImage.onerror = function() {
         bigImage.src = "img/big/nif.png";
     }
-
-    var imgText = document.createElement("span");
-    imgText.className = "absolute bottom-5 md:bottom-10 text-3xl md:text-6xl text-white text-opacity-50";
-    imgText.innerHTML = event.target.alt;
-    bigImageDiv.append(imgText);
 
     var imgNavDiv = document.createElement("div");
     imgNavDiv.className = "absolute grid grid-cols-12 w-11/12 md:w-2/3 h-full";
@@ -37,15 +31,12 @@ function showBigImage(event) {
         switch(bImgFileName) {
             case "b_1.jpg":
                 bImgFileName = "b_3.jpg";
-                imgText.innerHTML = "Снежный Барс";
                 break;
             case "b_2.jpg":
                 bImgFileName = "b_1.jpg";
-                imgText.innerHTML = "БАО";
                 break;
             case "b_3.jpg":
                 bImgFileName = "b_2.jpg";
-                imgText.innerHTML = "Алтын-Эмель";
                 break;
             default:
                 bImgFileName = "nif.png";
@@ -64,15 +55,12 @@ function showBigImage(event) {
         switch(bImgFileName) {
             case "b_1.jpg":
                 bImgFileName = "b_2.jpg";
-                imgText.innerHTML = "Алтын-Эмель";
                 break;
             case "b_2.jpg":
                 bImgFileName = "b_3.jpg";
-                imgText.innerHTML = "Снежный Барс";
                 break;
             case "b_3.jpg":
                 bImgFileName = "b_1.jpg";
-                imgText.innerHTML = "БАО";
                 break;
             default:
                 bImgFileName = "nif.png";
