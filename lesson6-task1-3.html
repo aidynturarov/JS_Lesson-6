@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="gallery.js" defer></script>
+</head>
+<body>
+    <div class="min-h-screen bg-gray-900">
+        <!-- Маленькие изображения -->
+        <div class="flex p-8 justify-center gap-4">
+
+            <img class="rounded-md shadow-lg w-24 md:w-28 cursor-pointer transform hover:scale-110 transition duration-300" src="img/small/s_1.jpg" alt="БАО">
+            <img class="rounded-md shadow-lg w-24 md:w-28 cursor-pointer transform hover:scale-110 transition duration-300" src="img/small/s_2.jpg" alt="Алтын-Эмель">
+            <img class="rounded-md shadow-lg w-24 md:w-28 cursor-pointer transform hover:scale-110 transition duration-300" src="img/small/s_3.jpg" alt="Снежный Барс">
+        
+        </div>
+
+        <!-- Большое изображение -->
+        <div class="relative flex justify-center" id="bigImageDiv"></div>
+    </div>
+</body>
+</html>
